@@ -8,7 +8,6 @@ import sqlite3
 import requests
 import subprocess
 
-from win32crypt import CryptUnprotectData
 from Crypto.Cipher import AES 
 
 def safe(func):
